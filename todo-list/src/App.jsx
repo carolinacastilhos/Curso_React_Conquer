@@ -6,9 +6,13 @@ import { Plus } from "react-feather";
 // importando o component PLUS (qu é o ícone de +) da biblioteca react-feather instalada através do npm i react-feather
 import styles from "./styles/pages/home.module.css";
 import { Task } from "./components/Task/index";
+import { CreateTaskModal } from "./components/CreateTaskModal/index";
+import Modal from "react-modal";
+
+Modal.setAppElement("#root");
 
 function App() {
-  const [count, setCount] = useState(0);
+  const isCreateTaskModalOpen = false;
 
   return (
     <div className="App">
@@ -23,6 +27,8 @@ function App() {
           <Task />
         </div>
       </section>
+
+      <CreateTaskModal isOpen={isCreateTaskModalOpen} />
     </div>
   );
 }

@@ -134,3 +134,29 @@ Exemplo2:
 Na função, o componente recebe o argumento com o objeto props. Neste componente Computer, a gente definiu que brand seria uma dessas props, então a gente consegue passar um valor diferente em cada local da aplicação. No nosso código, props.brand será responsável por renderizar o valor que estivermos passando para este atributo.
 
 - Os componentes em react possuem uma característica em relação as suas propriedades que é chamada de unidirectional data flow. Isto significa que as props, que são os dados transferidos de um componente para o outro, possuem uma vida de mão única, podendo ser apenas transferidas dos componentes pais para os filhos e não vice-versa. Este comportamento traz algumas vantagens no Debugging, pois como a gente sabe da onde o dado sai e para onde ele vai, fica mais fácil para controlar estes erros. E garante um maior controle à aplicação e torna as aplicações mais eficientes.
+
+- modal: componente renderiza sua childrem sobre um componente backdrop. Oferecendo então: criação de um plano de fundo, desativa a rolagem de conteúdo, gerenciamento do foco, e gerenciamente do empilhamento em camadas. O modal pode ser uma caixa de diálogo, drawers, menus, popovers ou nested modals.
+  Exemplo de modal:
+
+```
+<Button onClick={handleOpen}>Open modal</Button>
+<Modal
+open={open}
+onClose={handleClose}
+aria-labelledby="parent-modal-title"
+aria-describedby="parent-modal-description"
+>
+
+<Box sx={{...style, width: 400 }}>
+<h2 id="parent-modal-title">Text in a modal</h2>
+<p id="parent-modal-description">
+Duis mollis, est non commodo luctus, nisi erat porttitor ligula. </p>
+<ChildModal />
+</Box>
+</Modal>
+
+```
+
+Temos um modal e dentro dele todo o conteúdo que será renderizado dentro dele. Tem o componente Button para abrir o modal na tela. Instalamos o pacote do react modal com o comando 'npm install --save react-modal'. Então no arquivo index.jsx do componente modal, nós importamos Modal from react-modal.
+
+- para facilitar sua reutilização, eu poderia separar meu componente em mais de um?
