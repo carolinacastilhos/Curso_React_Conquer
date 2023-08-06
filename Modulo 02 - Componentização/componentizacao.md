@@ -82,3 +82,29 @@ componentWillUnmont, onde os componentes serão desmontados, encerrando sua exec
 ## Criando um primeiro componente
 
 - o arquivo main.jsx será responsávle pelo processo de renderização, enquanto no arquivo App.jsx serão carregados todos os componentes periféricos.
+
+- No main.jsx temos:
+
+```
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+```
+
+Tudo que estiver dentro do .render () será renderizado no navegador. Neste caso, o nosso componente App está sendo renderizado dentro da tag React.StrictMode -> Isto traz algumas funcionalidades, como a identificação de métodos de ciclo de vidas seguros, detecção de efeitos colaterais inesperados e detecção de uso de recursos defasados.
+
+- adicionamos a pasta styles dentro de "src" com o arquivo global.css e importamos ele no main.jsx. No main, tbm apagamos o import do index.html;
+
+- após, fomos em App.jsx, apagamos tudo dentro do return da function App para iniciarmos o nosso projeto.
+
+- para instalar pacote de ícones para usarmos no projeto, vamos no terminal do projeto e colocamos o comando 'npm i react-feather'. Com isto, no App.jsx podemos importar o componente {Plus} from 'react-feather'; e usar o componente <Plus /> que é o ícone de +.
+
+- na pasta 'components' adicionamos a pasta 'Task' e criamos o arquivo 'index.jsx', onde vamos criar a export function Task() { }. É necessário utilizar o export function para que possamos exportar ela para ser usada em outro arquivo.
+
+- como boa prática, sempre separe os componentes React em pastas descritivas que façam sentido para o projeto. Um dos nomes comuns desta pasta é 'components', onde ficará os componentes responsáveis por renderiza-lo na aplicação, regras de negócio e tbm algumas partes de lógica.
+
+- outro tipo são os adapters/adaptadores/providers, que tem a funcionalidade de realizar qualquer chamada de API, seja ela por via websockets ou outra forma de comunicação com o serviço exterior.
+
+- outra pasta é o tipo styles, onde fica todo o css da nossa aplicação ou styles components. Dentro desta pasta é possível fazer a estilização de cada component ou ainda a global.
