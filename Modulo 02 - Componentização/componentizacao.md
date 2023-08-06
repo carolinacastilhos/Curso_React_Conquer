@@ -108,3 +108,29 @@ Tudo que estiver dentro do .render () será renderizado no navegador. Neste caso
 - outro tipo são os adapters/adaptadores/providers, que tem a funcionalidade de realizar qualquer chamada de API, seja ela por via websockets ou outra forma de comunicação com o serviço exterior.
 
 - outra pasta é o tipo styles, onde fica todo o css da nossa aplicação ou styles components. Dentro desta pasta é possível fazer a estilização de cada component ou ainda a global.
+
+## Propriedades - props
+
+- são infos que são passadas para serem utilizadas dentro do nosso componente.
+- podem ser do tipo string, number ou até funções.
+- conseguimos passar estas infos através de tributos;
+- para poder dizer quais são as props que queremos passar para o nosso componente, a gente define elas como atributos na hora de renderizar o mesmo.
+  Exemplo1:
+
+```const myElement = <Computer brand="Dell"/>;
+
+```
+
+Conseguimos ver que temos o atributo brand, e esta é a propriedade que estamos passando para dentro do componente.
+
+Exemplo2:
+
+```function Computer(props) {
+  return <h3>Eu tenho um PC {props.brand} !</h3>;
+}
+
+```
+
+Na função, o componente recebe o argumento com o objeto props. Neste componente Computer, a gente definiu que brand seria uma dessas props, então a gente consegue passar um valor diferente em cada local da aplicação. No nosso código, props.brand será responsável por renderizar o valor que estivermos passando para este atributo.
+
+- Os componentes em react possuem uma característica em relação as suas propriedades que é chamada de unidirectional data flow. Isto significa que as props, que são os dados transferidos de um componente para o outro, possuem uma vida de mão única, podendo ser apenas transferidas dos componentes pais para os filhos e não vice-versa. Este comportamento traz algumas vantagens no Debugging, pois como a gente sabe da onde o dado sai e para onde ele vai, fica mais fácil para controlar estes erros. E garante um maior controle à aplicação e torna as aplicações mais eficientes.
