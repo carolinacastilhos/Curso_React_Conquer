@@ -69,7 +69,7 @@ Neste segundo exemplo fica um pouco mais difícil de perceber oq está acontecen
 
 - outras duas ferramentas necessárias:
 
-1. ESlint: no terminal ir até o projeto 'cd .\vite-project\', depois colocar 'npm i eslint --save-dev'. Após, digitamos 'npm init @eslint/config'. Se pedir para instalar um pacote adicional, pode colocar 'y'. Depois vai pedir algumas configurações: selecionamos então que o eslint vai checar a sintaxe e encontrar problemas, que estamos usando o JS modules e react. Vai perguntar se queremos usar agora o TS e podemos dizer que 'n'. Onde o browser está sendo executado colocamos navegador. Qual formato de arquivo? JS. Se precisar de uma dependência a mais: y. Qual gerenciador de pacotes estamos usando: npm.
+1. ESlint: no terminal ir até o projeto 'cd .\vite-project\', depois colocar 'npm i eslint --save-dev'. Após, digitamos 'npm init @eslint/config'. Se pedir para instalar um pacote adicional, pode colocar 'y'. Depois vai pedir algumas configurações: selecionamos então que o eslint vai checar a sintaxe e encontrar problemas, que estamos usando o JS modules e react. Vai perguntar se queremos usar agora o TS e podemos dizer que 'n'. Onde o código está sendo executado colocamos browser. Qual formato de arquivo? JS. Se precisar de uma dependência a mais: y. Qual gerenciador de pacotes estamos usando: npm.
 2. Prettier
 
 ## Estrutura do React
@@ -77,10 +77,10 @@ Neste segundo exemplo fica um pouco mais difícil de perceber oq está acontecen
 - para criar um novo projeto podemos colocar dois comandos:
 
 1. npx create-react-app -> se criarmos desta forma, precisamos colocar o npm install para instalar todas as dependências e para iniciar o projeto, colocamos npm start
-2. npm init vite@latest -> para criar o projeto com o vite
+2. npm init vite@latest -> para criar o projeto com o vite, conforme descrito anteriormente
 
 - organização:
 
-1. se criar um projeto com 5 págs ou mais, deve-se criar uma pasta 'pages' dentro do da pasta 'src'.
+1. se criar um projeto com 5 págs ou mais, deve-se criar uma pasta 'pages' dentro da pasta 'src'.
 2. vai precisar criar tbm uma pasta 'routes' na 'src'.
 3. criar pasta 'components', para os componentes em comum entre as págs.
