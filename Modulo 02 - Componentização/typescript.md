@@ -50,3 +50,5 @@ color = Cor.AZUL;
 - para criar um projeto com TS, pode escrever no terminal 'npx create-react-app my-projects-ts --template typescript'
 
 - se já temos o projeto sem TS, digitamos 'npm install --save-dev typescript'. É necessário depois alterar dentro do arquivo package.json e adicionar 'tsc &&' no comando "build", juntamente com oq já estava escrito.
+
+- arquivo 'types.ts' dentro da pasta de cada componente: é onde iremos especificar todos os tipos de dados que os componentes importam ou exportam dentro da props. Tbm ficam a interface do componente (contratos que a classe ou o componente deve seguir).

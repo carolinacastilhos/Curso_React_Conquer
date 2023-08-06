@@ -1,7 +1,7 @@
 .container {
   position: relative;
 
-  width:100%;
+  width: 100%;
   max-width: 500px;
   height: fit-content;
 
@@ -30,7 +30,7 @@
   justify-content: center;
 }
 .closeButton:hover {
-  filter: brightness(0.2)
+  filter: brightness(0.2);
 }
 
 form {
@@ -39,10 +39,10 @@ form {
 
 input {
   background: var(--white);
-  
+
   border: none;
   border-radius: 10px;
-  
+
   margin-top: 0.25rem;
   padding: 0.5rem 1rem;
 
