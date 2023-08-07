@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from "../../styles/theme";
 
 export const Container = styled.div`
   margin: 100px auto 0;
@@ -9,7 +8,7 @@ export const Container = styled.div`
   > div {
     width: 18px;
     height: 18px;
-    background: ${({ theme }) => theme.colors.primary[500]};
+    background: #f41b3b;
 
     border-radius: 100%;
     display: inline-block;
