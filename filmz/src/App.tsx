@@ -1,15 +1,19 @@
-import { ThemeProvider } from "styled-components";
-import { GlobalStyles } from "./styles/globals";
-import { theme } from "./styles/theme";
-import { AppRoutes } from "./routes";
+import { ThemeProvider } from "styled-components"
 
-function App() {
+import { AppProvider } from "./hooks/index"
+
+import { AppRoutes } from "./routes"
+
+import { theme } from "./styles/theme"
+
+import 'react-toastify/dist/ReactToastify.css';
+
+export function App() {
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <AppRoutes />
+      <AppProvider>
+        <AppRoutes />
+      </AppProvider>
     </ThemeProvider>
-  );
+  )
 }
-
-export default App;
